@@ -54,6 +54,7 @@ Footer Column Three Text: |-
   #### About the designer
 
   Tristan Main is a designer working in publishing in Melbourne.
+layout: homepage
 ---
 
 **Copywrong to copywriter** is a handbook for anyone who feels like they can’t write to save themselves.
