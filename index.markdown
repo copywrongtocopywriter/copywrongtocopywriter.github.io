@@ -1,5 +1,5 @@
 ---
-title: Index
+title: Homepage
 date: 2017-11-13 15:53:00 +11:00
 Buy Now Button: Buy now $25
 Buy Now Modal Button: Buy now with PayPal
