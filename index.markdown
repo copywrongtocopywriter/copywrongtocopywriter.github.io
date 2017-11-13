@@ -24,7 +24,7 @@ List Title: What’s in the book
 List Item One Text: |-
   #### 1. You, the expert
 
-  The best copywriters write from a position of true knowledge. If you’re a business owner, you’re your own best copywriter.
+  The best copywriters write from a position of true knowledge. If you’re a business owner, you’re the best copywriter for the job.
 List Item Two Text: |-
   #### 2. The fundamentals
 
@@ -32,7 +32,7 @@ List Item Two Text: |-
 List Item Three Text: |-
   #### 3. Get to work
 
-  How to write for the web, how to get started, and how to put together a brief.
+  How to put together a brief, how to break through writer's block, and how to write great copy for the web.
 Quote Two Text: Some of the best copywriting advice I’ve read. A great resource and
   a good read, too.
 Quote Two Author: Penny Modra
