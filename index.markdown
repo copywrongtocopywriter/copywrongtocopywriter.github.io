@@ -2,29 +2,29 @@
 title: Homepage
 date: 2017-11-13 15:53:00 +11:00
 Buy Now Button: Buy now $25
-Buy Now Modal Button: Buy now with PayPal
+Buy Now Modal Button: Check out with PayPal
 Column One Text: |-
-  #### Written for small business
+  #### Made for small business
 
-  If you write for your own business, or run a small website with just a few pages, you’ll learn the fundamentals to write your own copy.
+  Run your own business? This book was written especially for you. Discover how to make words work in your favour while learning the fundamentals to write your own copy.
 Column Two Text: |-
-  #### For new copywriters
+  #### Great for copywriters
 
-  If you’re planning a career as a copywriter, you’ll learn the fundamentals by reading this book. A strong overview will increase your knowledge, skill and confidence.
+  If you’re planning a career as a copywriter, you’ll want to know how to explain the basic concepts to your clients. Reading this book will increase your knowledge, skill and confidence.
 Column Three Text: |-
-  #### Useful for design studios
+  #### Perfect for design studios
 
-  If you’re not writing the copy, your client will be. Help them get a head start by giving your clients a strong introduction to copywriting.
+  If you’re not writing the copy, your client will be. Help them get a head start by giving your clients a strong introduction to writing with purpose.
 Quote One Text: A fantastic way to up your copywriting game and grow more confident
   in your ability to use the right words.
-Quote One Author: Kai Brach
-Quote One Link: Offscreen magazine
-Quote One Link URL: https://www.offscreenmag.com/
+Quote One Author: Michael Bascetta
+Quote One Link: Small business owner at Grow Assembly
+Quote One Link URL: https://www.growassembly.com.au/
 List Title: What’s in the book
 List Item One Text: |-
   #### 1. You, the expert
 
-  The best copywriters write from a position of true knowledge. If you’re a business owner, you’re your own best copywriter.
+  The best copywriters write from a position of true knowledge. If you’re a business owner, you’re the best copywriter for the job.
 List Item Two Text: |-
   #### 2. The fundamentals
 
@@ -32,20 +32,20 @@ List Item Two Text: |-
 List Item Three Text: |-
   #### 3. Get to work
 
-  How to write for the web, how to get started, and how to put together a brief.
-Quote Two Text: Really great
+  How to put together a brief, how to break through writer's block, and how to write great copy for the web.
+Quote Two Text: Some of the best copywriting advice I’ve read. A great resource and
+  a good read, too.
 Quote Two Author: Penny Modra
 Quote Two Link: The Good Copy
 Quote Two Link URL: https://thegoodcopy.com.au/
 Newsletter Title: Newsletter
-Newsletter Text: If you're interested in hearing more about the book in the future,
-  sign up to my newsletter.
-Instagram Text: The hottest place online to see photos of the book, the colour pink
-  and quick updates.
+Newsletter Text: Interested to hear more about the book in the future? Sign up to
+  my newsletter.
+Instagram Text: More photos of the book than you can poke a stick at.
 Footer Column One Text: |-
   #### About the author
 
-  Tait Ischia is a copywriter and content strategist from Melbourne, Australia. I’ve been writing copy since 2007.
+  Tait Ischia is a copywriter and content strategist from Melbourne, Australia. He has been writing copy since 2007.
 Footer Column Two Text: |-
   #### About the illustrator
 
@@ -53,7 +53,7 @@ Footer Column Two Text: |-
 Footer Column Three Text: |-
   #### About the designer
 
-  Tristan Main is a designer working in publishing in Melbourne.
+  Tristan Main is a graphic designer from Melbourne, Australia, and currently works in the publishing industry.
 layout: homepage
 ---
 
