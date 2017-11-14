@@ -4,7 +4,7 @@ date: 2017-11-13 15:53:00 +11:00
 Buy Now Button: Buy now $25
 Buy Now Modal Button: Check out with PayPal
 Column One Text: |-
-  ## **Made for small business**
+  **Made for small business**
 
   Run your own business? This book was written especially for you. Discover how to make words work in your favour while learning the fundamentals to write your own copy.
 Column Two Text: |-
