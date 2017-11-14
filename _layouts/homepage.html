@@ -24,7 +24,7 @@ layout: homepage
     <main>
       <section class="blurb">
         {{ content }}
-        <button>{{ page['Buy Now Button'] | markdownify }}</button>
+        <button>{{ page['Buy Now Button']</button>
       </section>
       <section class="features">
         <div>
@@ -41,14 +41,14 @@ layout: homepage
         </div>
       </section>
       <blockquote>
-        <q>{{ page['Quote One Text'] | markdownify }}</q>
+        <q>{{ page['Quote One Text'] }}</q>
         <cite>
-          <div class="author">{{ page['Quote One Author'] | markdownify }}</div>
-          <div class="link"><a target="_blank" href="{{ page['Quote One Link URL'] | markdownify }}">{{ page['Quote One Link'] | markdownify }}</a></div>
+          <div class="author">{{ page['Quote One Author'] }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote One Link URL'] }}">{{ page['Quote One Link'] }}</a></div>
         </cite>
       </blockquote>
       <section class="whats-in">
-        <h2>{{ page['List Title'] | markdownify }}</h2>
+        <h2>{{ page['List Title'] }}</h2>
         <div class="block-wrapper">
           <img src="assets/witb-1.png" alt="Thumbs up">
           <div class="text-wrapper">
@@ -69,15 +69,15 @@ layout: homepage
         </div>
       </section>
       <blockquote>
-        <q>{{ page['Quote Two Text'] | markdownify }}</q>
+        <q>{{ page['Quote Two Text'] }}</q>
         <cite>
-          <div class="author">{{ page['Quote Two Author'] | markdownify }}</div>
-          <div class="link"><a target="_blank" href="{{ page['Quote Two Link URL'] | markdownify }}">{{ page['Quote Two Link'] | markdownify }}</a></div>
+          <div class="author">{{ page['Quote Two Author'] }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote Two Link URL'] }}">{{ page['Quote Two Link'] }}</a></div>
         </cite>
       </blockquote>
       <section class="subscribe">
         <div class="text">
-          <h3>{{ page['Newsletter Title'] | markdownify }}</h3>
+          <h3>{{ page['Newsletter Title'] }}</h3>
           <p>{{ page['Newsletter Text'] | markdownify }}</p>
         </div>
         <form action="" method="post">
