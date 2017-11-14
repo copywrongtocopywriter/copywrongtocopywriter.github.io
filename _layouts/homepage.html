@@ -6,7 +6,7 @@ layout: homepage
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Copywrong to copywriter</title>
+    <title>{{ site.title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -29,62 +29,56 @@ layout: homepage
       <section class="features">
         <div>
           <img src="assets/intro-pen.gif" alt="Person with a giant pen">
-          <h4>Written for small business</h4>
-          <p>If you write for your own business, or run a small website with just a few pages, you’ll learn the fundamentals to write your own copy.</p>
+          {{ page['Column One Text'] }}
         </div>
         <div>
           <img src="assets/intro-guy2.gif" alt="Person looking at some paper">
-          <h4>For new copywriters</h4>
-          <p>If you’re planning a career as a copywriter, you’ll learn the fundamentals by reading this book. A strong overview will increase your knowledge, skill and confidence.</p>
+          {{ page['Column Two Text'] }}
         </div>
         <div>
           <img src="assets/intro-magic.gif" alt="Person making magic">
-          <h4>Useful for design studios</h4>
-          <p>If you’re not writing the copy, your client will be. Help them get a head start by giving your clients a strong introduction to copywriting.</p>
+          {{ page['Column Three Text'] }}
         </div>
       </section>
       <blockquote>
-        <q>A fantastic way to up your copywriting game and grow more confident in your ability to use the right words.</q>
+        <q>{{ page['Quote One Text'] }}</q>
         <cite>
-          <div class="author">Kai Brach</div>
-          <div class="link"><a target="_blank" href="https://www.offscreenmag.com/">Offscreen magazine</a></div>
+          <div class="author">{{ page['Quote One Author'] }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote One Link URL'] }}"></a>{{ page['Quote One Link'] }}</div>
         </cite>
       </blockquote>
       <section class="whats-in">
-        <h2>What’s in the book</h2>
+        <h2>{{ page['List Title'] }}</h2>
         <div class="block-wrapper">
           <img src="assets/witb-1.png" alt="Thumbs up">
           <div class="text-wrapper">
-            <h4>1. You, the expert</h4>
-            <p>The best copywriters write from a position of true knowledge. If you’re a business owner, you’re your own best copywriter.</p>
+            {{ page['List Item One Text'] }}
           </div>
         </div>
         <div class="block-wrapper">
           <img src="assets/witb-2.png" alt="Shapes">
           <div class="text-wrapper">
-            <h4>2. The fundamentals</h4>
-            <p>Develop your ability to the say the right thing (strategy) to the right people (audience) in the right way (grammar).</p>
+            {{ page['List Item Two Text'] }}
           </div>
         </div>
         <div class="block-wrapper">
-          <img src="assets/witb-3.png" alt="Person walking on pen line">
+          <img src="assets/witb-3.png" alt="">
           <div class="text-wrapper">
-            <h4>3. Get to work</h4>
-            <p>How to write for the web, how to get started, and how to put together a brief.</p>
+            {{ page['List Item Three Text'] }}
           </div>
         </div>
       </section>
       <blockquote>
-        <q>Really great</q>
+        <q>{{ page['Quote Two Text'] }}</q>
         <cite>
-          <div class="author">Penny Modra</div>
-          <div class="link"><a target="_blank" href="https://thegoodcopy.com.au/">The Good Copy</a></div>
+          <div class="author">{{ page['Quote Two Author'] }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote Two Link URL'] }}">{{ page['Quote Two Link'] }}</a></div>
         </cite>
       </blockquote>
       <section class="subscribe">
         <div class="text">
-          <h3>Newsletter</h3>
-          <p>If you're interested in hearing more about the book in the future, sign up to my newsletter.</p>
+          <h3>{{ page['Newsletter Title'] }}</h3>
+          <p>{{ page['Newsletter Text'] }}</p>
         </div>
         <form action="" method="post">
           <input type="email" id="POST-email" placeholder="Your email here" required>
@@ -94,7 +88,7 @@ layout: homepage
       <section class="social">
         <img src="assets/instagram.png" alt="Instagram">
         <h3>Instagram</h3>
-        <p>The hottest place online to see photos of the book, the colour pink and quick updates.</p>
+        <p>{{ page['Instagram Text'] }}</p>
         <a target="_blank" href="https://www.instagram.com/copywrongtocopywriter/">@copywrongtocopywriter</a>
       </section>
     </main>
@@ -150,18 +144,9 @@ layout: homepage
         <img src="assets/book-4.jpg">
       </div>
       <section class="about">
-        <div>
-          <h4>About the author</h4>
-          <p><a target="_blank" href="http://taitischia.com/">Tait Ischia</a> is a copywriter and content strategist from Melbourne, Australia. I’ve been writing copy since 2007.</p>
-        </div>
-        <div>
-          <h4>About the illustrator</h4>
-          <p><a target="_blank" href="http://jeanes.co/">Jacob Zinman-Jeanes</a> is an interaction and graphic designer, illustrator and musician currently living in Melbourne, Australia.</p>
-        </div>
-        <div>
-          <h4>About the designer</h4>
-          <p><a target="_blank" href="http://listofworks.info/">Tristan Main</a> is a designer working in publishing in Melbourne.</p>
-        </div>
+        <div>{{ page['Footer Column One Text'] }}</div>
+        <div>{{ page['Footer Column Two Text'] }}</div>
+        <div>{{ page['Footer Column Three Text'] }}</div>
       </section>
     </footer>
     <script type="text/javascript" src="assets/fastclick.js"></script>
