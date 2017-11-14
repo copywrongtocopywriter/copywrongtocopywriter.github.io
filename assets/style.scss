@@ -60,32 +60,32 @@ $mobile: 650px;
 
 @font-face {
   font-family: 'Proto Grotesk';
-  src: url('../other/fonts/protogrotesk-regular-webfont.woff2') format('woff2'),
-       url('../other/fonts/protogrotesk-regular-webfont.woff') format('woff');
+  src: url('protogrotesk-regular-webfont.woff2') format('woff2'),
+       url('protogrotesk-regular-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Proto Grotesk';
-  src: url('../other/fonts/protogrotesk-light-webfont.woff2') format('woff2'),
-       url('../other/fonts/protogrotesk-light-webfont.woff') format('woff');
+  src: url('protogrotesk-light-webfont.woff2') format('woff2'),
+       url('protogrotesk-light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('../other/fonts/tiempostext-regular-webfont.woff2') format('woff2'),
-       url('../other/fonts/tiempostext-regular-webfont.woff') format('woff');
+  src: url('tiempostext-regular-webfont.woff2') format('woff2'),
+       url('tiempostext-regular-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Tiempos Text';
-  src: url('../other/fonts/tiempostext-semibold-webfont.woff2') format('woff2'),
-       url('../other/fonts/tiempostext-semibold-webfont.woff') format('woff');
+  src: url('tiempostext-semibold-webfont.woff2') format('woff2'),
+       url('tiempostext-semibold-webfont.woff') format('woff');
   font-weight: bold;
   font-style: normal;
 }
