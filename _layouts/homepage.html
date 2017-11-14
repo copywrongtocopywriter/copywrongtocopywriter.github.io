@@ -24,61 +24,61 @@ layout: homepage
     <main>
       <section class="blurb">
         {{ content }}
-        <button>{{ page['Buy Now Button'] }}</button>
+        <button>{{ page['Buy Now Button'] | markdown }}</button>
       </section>
       <section class="features">
         <div>
           <img src="assets/intro-pen.gif" alt="Person with a giant pen">
-          {{ page['Column One Text'] }}
+          {{ page['Column One Text'] | markdown }}
         </div>
         <div>
           <img src="assets/intro-guy2.gif" alt="Person looking at some paper">
-          {{ page['Column Two Text'] }}
+          {{ page['Column Two Text'] | markdown }}
         </div>
         <div>
           <img src="assets/intro-magic.gif" alt="Person making magic">
-          {{ page['Column Three Text'] }}
+          {{ page['Column Three Text'] | markdown }}
         </div>
       </section>
       <blockquote>
-        <q>{{ page['Quote One Text'] }}</q>
+        <q>{{ page['Quote One Text'] | markdown }}</q>
         <cite>
-          <div class="author">{{ page['Quote One Author'] }}</div>
-          <div class="link"><a target="_blank" href="{{ page['Quote One Link URL'] }}">{{ page['Quote One Link'] }}</a></div>
+          <div class="author">{{ page['Quote One Author'] | markdown }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote One Link URL'] | markdown }}">{{ page['Quote One Link'] | markdown }}</a></div>
         </cite>
       </blockquote>
       <section class="whats-in">
-        <h2>{{ page['List Title'] }}</h2>
+        <h2>{{ page['List Title'] | markdown }}</h2>
         <div class="block-wrapper">
           <img src="assets/witb-1.png" alt="Thumbs up">
           <div class="text-wrapper">
-            {{ page['List Item One Text'] }}
+            {{ page['List Item One Text'] | markdown }}
           </div>
         </div>
         <div class="block-wrapper">
           <img src="assets/witb-2.png" alt="Shapes">
           <div class="text-wrapper">
-            {{ page['List Item Two Text'] }}
+            {{ page['List Item Two Text'] | markdown }}
           </div>
         </div>
         <div class="block-wrapper">
           <img src="assets/witb-3.png" alt="">
           <div class="text-wrapper">
-            {{ page['List Item Three Text'] }}
+            {{ page['List Item Three Text'] | markdown }}
           </div>
         </div>
       </section>
       <blockquote>
-        <q>{{ page['Quote Two Text'] }}</q>
+        <q>{{ page['Quote Two Text'] | markdown }}</q>
         <cite>
-          <div class="author">{{ page['Quote Two Author'] }}</div>
-          <div class="link"><a target="_blank" href="{{ page['Quote Two Link URL'] }}">{{ page['Quote Two Link'] }}</a></div>
+          <div class="author">{{ page['Quote Two Author'] | markdown }}</div>
+          <div class="link"><a target="_blank" href="{{ page['Quote Two Link URL'] | markdown }}">{{ page['Quote Two Link'] | markdown }}</a></div>
         </cite>
       </blockquote>
       <section class="subscribe">
         <div class="text">
-          <h3>{{ page['Newsletter Title'] }}</h3>
-          <p>{{ page['Newsletter Text'] }}</p>
+          <h3>{{ page['Newsletter Title'] | markdown }}</h3>
+          <p>{{ page['Newsletter Text'] | markdown }}</p>
         </div>
         <form action="" method="post">
           <input type="email" id="POST-email" placeholder="Your email here" required>
@@ -88,7 +88,7 @@ layout: homepage
       <section class="social">
         <img src="assets/instagram.png" alt="Instagram">
         <h3>Instagram</h3>
-        <p>{{ page['Instagram Text'] }}</p>
+        <p>{{ page['Instagram Text'] | markdown }}</p>
         <a target="_blank" href="https://www.instagram.com/copywrongtocopywriter/">@copywrongtocopywriter</a>
       </section>
     </main>
@@ -144,9 +144,9 @@ layout: homepage
         <img src="assets/book-4.jpg">
       </div>
       <section class="about">
-        <div>{{ page['Footer Column One Text'] }}</div>
-        <div>{{ page['Footer Column Two Text'] }}</div>
-        <div>{{ page['Footer Column Three Text'] }}</div>
+        <div>{{ page['Footer Column One Text'] | markdown }}</div>
+        <div>{{ page['Footer Column Two Text'] | markdown }}</div>
+        <div>{{ page['Footer Column Three Text'] | markdown }}</div>
       </section>
     </footer>
     <script type="text/javascript" src="assets/fastclick.js"></script>
