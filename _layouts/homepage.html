@@ -10,16 +10,31 @@ layout: homepage
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="icon" type="image/png" href="assets/favicon.png">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-77708071-1"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-77708071-2', 'auto');
+      ga('send', 'pageview');
+    </script>
     <link href="assets/normalize.css" rel="stylesheet">
     <link href="assets/flickity.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
   </head>
   <body>
+    <div class="marquee">
+      <div class="one">&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }} &middot;</div>
+      <div class="two">&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }}&nbsp;&nbsp;&middot;&nbsp;&nbsp;{{ page['Marquee'] }} &middot;</div>
+    </div>
     <div class="intro-slideshow">
-      <img src="assets/book-1.jpg">
-      <img src="assets/book-2.jpg">
-      <img src="assets/book-3.jpg">
-      <img src="assets/book-4.jpg">
+      <div class="slide" style="background-image: url(assets/book-1.jpg);"></div>
+      <div class="slide" style="background-image: url(assets/book-2.jpg);"></div>
+      <div class="slide" style="background-image: url(assets/book-3.jpg);"></div>
+      <div class="slide" style="background-image: url(assets/book-4.jpg);"></div>
     </div>
     <main>
       <section class="blurb">
@@ -80,10 +95,15 @@ layout: homepage
           <h3>{{ page['Newsletter Title'] }}</h3>
           <p>{{ page['Newsletter Text'] | markdownify }}</p>
         </div>
-        <form action="" method="post">
-          <input type="email" id="POST-email" placeholder="Your email here" required>
+        <form class="mailchimp" action="//copygui.us13.list-manage.com/subscribe/post?u=e1d92b06ad38636c8a6db59fc&amp;id=ec3f4b3a08" method="post">
+          <input type="email" name="EMAIL" placeholder="Your email here" required>
+          <input style="display: none" type="checkbox" value="8" name="group[8329][8]" checked="checked">
           <input class="submit" type="submit" value="Join">
         </form>
+        <div class="form-response">
+          <div class="error">Sorry, please try again.</div>
+          <div class="success">You're signed up.</div>
+        </div>
       </section>
       <section class="social">
         <img src="assets/instagram.png" alt="Instagram">
@@ -94,54 +114,57 @@ layout: homepage
     </main>
     <div class="buy-overlay">
     </div>
-    <div class="buy-modal">
-      <div class="close">
-        <img src="assets/buy-close.png" alt="Close">
-      </div>
-      <form action="">
-        <div class="top">
-          <div class="quantity">
-              <label for="quantity">Quantity</label>
-              <input type="number" min="1" max="3" name="quantity" id="quantity" value="1" required>
-            </div>
-            <div class="shipping">
-              <label for="country">Shipping to</label>
-              <select name="country" id="country" required>
-                <option value="" disabled selected>Choose a country</option>
-                <option value="Australia">Australia</option>
-                <option value="New Zealand">New Zealand</option>
-                <option value="USA">USA</option>
-                <option value="UK">UK</option>
-                <option value="India">India</option>
-              </select>
-              <img class="pointer" src="assets/buy-pointer.png" alt="">
-              <div class="shipping-options">
-                <div>
-                  <input type="radio" id="regular" name="shipping" value="regular">
-                  <label for="regular">Regular&mdash;$10</label>
+    <div class="buy-modal-wrapper">
+      <div class="buy-modal">
+        <div class="close">
+          <img src="assets/buy-close.png" alt="Close">
+        </div>
+        <div class="form">
+          <div class="top">
+            <div class="quantity">
+                <label for="quantity">Quantity</label>
+                <input type="number" min="1" max="3" name="quantity" id="quantity" value="1" required>
+              </div>
+              <div class="shipping">
+                <label for="country">Shipping to</label>
+                <select name="country" class="country" required>
+                  <option value="" disabled selected>Country</option>
+                  <option value="AU">Australia</option>
+                  <option value="INT">International</option>
+                </select>
+                <div class="australia-shipping">
+                  <form class="get-shipping">
+                    <input class="street" type="text" name="street" placeholder="Street" required>
+                    <input class="postcode" type="text" name="postcode" placeholder="Postcode" required>
+                    <input type="submit" class="calculate" value="Calculate shipping">
+                  </form>
                 </div>
-                <div>
-                  <input type="radio" id="express" name="shipping" value="express">
-                  <label for="regular">Express&mdash;$25</label>
+                <img class="pointer" src="assets/buy-pointer.png" alt="">
+                <div class="shipping-options">
+                  <div>
+                    <label class="regular" for="regular">Regular&mdash;$<span class="shipping-cost"></span></label>
+                    <label class="international" for="international">DHL&mdash;$12</label>
+                  </div>
                 </div>
               </div>
+          </div>
+          <div class="extra">
+            <div class="price">
+              <h4>Total</h4>
+              <p>$<span class="total-price"></span> AUD</p>
             </div>
-        </div>
-        <div class="extra">
-          <div class="price">
-            <h4>Total</h4>
-            <p>$35 AUD</p>
-          </div>
-          <div class="purchase">
-            <input type="submit" value="Buy now with PayPal">
-            <img src="assets/paypal-logo.png" alt="Paypal logo">
+            <div class="purchase">
+              <div id="paypal-button"></div>
+              <!--<button>{{ page['Buy Now Modal Button'] }}</button>
+              <img src="assets/paypal-logo.png" alt="Paypal logo">-->
+            </div>
           </div>
         </div>
-      </form>
+      </div>
     </div>
+
     <footer>
-      <div class="footer-image">
-        <img src="assets/book-4.jpg">
+      <div class="footer-image" style="background-image: url('assets/book-4.jpg');">
       </div>
       <section class="about">
         <div>{{ page['Footer Column One Text'] | markdownify }}</div>
@@ -149,6 +172,7 @@ layout: homepage
         <div>{{ page['Footer Column Three Text'] | markdownify }}</div>
       </section>
     </footer>
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
     <script type="text/javascript" src="assets/fastclick.js"></script>
     <script type="text/javascript" src="assets/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="assets/jquery.bez.js"></script>
