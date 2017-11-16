@@ -203,16 +203,15 @@ $(document).ready(function() {
               eventAction: 'Complete'
             }
           );
-          ga('require', 'ecommerce');
           ga('ecommerce:addTransaction', {
             'id': payment.id,
             'revenue': (order.quantity * 25) + order.shipping,
-            'shipping': order.shipping,
-            'tax': '0'
+            'shipping': order.shipping
           });
           ga('ecommerce:addItem', {
             'id': payment.id,
             'name': 'Copywrong to copywriter',
+            'category': 'Book'
             'price': '25',
             'quantity': order.quantity
           });
