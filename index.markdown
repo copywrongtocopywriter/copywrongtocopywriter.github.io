@@ -3,7 +3,7 @@ title: Homepage
 date: 2017-11-13 15:53:00 +11:00
 Marquee: copywrong to copywriter
 Buy Now Button: Buy now $25
-Buy Now Modal Button: Check out with PayPal
+Thank You Text: Thanks.
 Column One Text: |-
   #### Made for small business
 
