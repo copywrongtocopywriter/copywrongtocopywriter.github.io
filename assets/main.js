@@ -211,7 +211,7 @@ $(document).ready(function() {
           ga('ecommerce:addItem', {
             'id': payment.id,
             'name': 'Copywrong to copywriter',
-            'category': 'Book'
+            'category': 'Book',
             'price': '25',
             'quantity': order.quantity
           });
