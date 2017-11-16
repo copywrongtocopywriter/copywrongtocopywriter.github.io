@@ -188,6 +188,9 @@ $(document).ready(function() {
             'quantity': order.quantity
           });
           ga('ecommerce:send');
+
+          $('.extra > div').hide();
+          $('.extra .thanks').show();
         });
       },
       onCancel: function(data) {

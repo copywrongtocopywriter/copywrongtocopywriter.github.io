@@ -1013,6 +1013,11 @@ body {
             }
           }
         }
+
+        .thanks {
+          display: none;
+          flex: 0 0 100%;
+        }
   
         .purchase {
           flex: 0 0 50%;
