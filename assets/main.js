@@ -88,50 +88,22 @@ $(document).ready(function() {
   $('.country').change(function() {
     var country = $('.country option:selected').val();
 
-    $('.australia-shipping').hide();
     $('.shipping-options label').hide();
     $('.pointer').hide();
     order.shipping = 0;
     updateFinalPrice();
 
     if (country === 'AU') {
-      $('.australia-shipping').show();
+      $('.shipping-options label.regular').show();
+      order.shipping = 8;
+      updateFinalPrice();
+      $('.extra .price').show();
     } else if (country === 'INT') {
       $('.shipping-options label.international').show();
       order.shipping = 12;
       updateFinalPrice();
       $('.extra .price').show();
     }
-  });
-
-  $('.get-shipping').on('submit', function() {
-    var that = this;
-
-    var street = $('.street').val();
-    var postcode = $('.postcode').val();
-
-    $.get('https://us-central1-copywrong-to-copywriter.cloudfunctions.net/shipping-api', {street: street, postcode: postcode, countrycode: 'AU', weight: 0.05 + order.quantity * 0.15}).done(function(data) {
-      if (data.success) {
-        var price = 0;
-        data.rates.forEach(function(el) {
-          if (el.service_code === '7D55') {
-            price = el.total_price;
-          }
-        });
-        order.shipping = price;
-        $(that).find('input[type="submit"]').hide();
-        $('.shipping-options label.regular .shipping-cost').html(order.shipping);
-        $('.shipping-options label.regular').show();
-        updateFinalPrice();
-        $('.extra .price').show();
-      } else {
-        $(that).find('input[type="submit"]').val('Sorry, please try again');
-      }
-    });
-
-    $(this).find('input[type="submit"]').val('Calculating...');
-
-    return false;
   });
 
   $('#quantity').bind('keyup mouseup', function() {
@@ -161,7 +133,7 @@ $(document).ready(function() {
     $('#paypal-button').html('');
 
     paypal.Button.render({
-      env: 'sandbox', // Or 'sandbox'
+      env: 'sandbox', // 'production' or 'sandbox'
       client: {
         sandbox: 'ATi_wJcJ7Cv_pqUWuoKaFsPI-Iq9GLF9C1BwS6f4GTiv4QqILnBC5CBH0N3i68UOg_JMhN3usRyikViS',
         production: 'AXqKyb-iuzscPaDxD_xJMllWPWOblQ09P9-jjgPq5AjFgpuIlbyO5GE-WqGHwxg7VnTQ9BUlsInVLWDQ'
