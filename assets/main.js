@@ -152,7 +152,7 @@ $(document).ready(function() {
     paypal.Button.render({
       env: 'production', // 'production' or 'sandbox'
       style: {
-        size:  'medium',    // small | medium | large | responsive
+        size:  'responsive',    // small | medium | large | responsive
         shape: 'rect',     // pill | rect
         color: 'black'      // gold | blue | silver | black
       },
