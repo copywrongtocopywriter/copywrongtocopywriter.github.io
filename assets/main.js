@@ -36,8 +36,12 @@ $(document).ready(function() {
   });
 
   // Modal behaviour
-  $('button').on('click', function() {
-    $('.buy-overlay, .buy-modal-wrapper').addClass('show');
+  $('.buy-now').on('click', function() {
+    $('.buy-overlay').addClass('show');
+    $('.buy-modal-wrapper').addClass('display');
+    setTimeout(function() {
+      $('.buy-modal-wrapper').addClass('show');
+    }, 10);
     $('body').addClass('hold');
 
     ga('send', 'event', {
@@ -50,6 +54,7 @@ $(document).ready(function() {
 
   $('.close, .buy-overlay').on('click', function() {
     $('.buy-overlay, .buy-modal-wrapper').removeClass('show');
+    $('.buy-modal-wrapper').removeClass('display');
     $('body').removeClass('hold');
   })
 
