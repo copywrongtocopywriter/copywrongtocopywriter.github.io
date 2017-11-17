@@ -90,6 +90,18 @@ $(document).ready(function() {
     return false;
   });
 
+  $('.plus').on('click', function() {
+    $('#quantity').val(parseInt($('#quantity').val(), 10) + 1);
+    order.quantity = $('#quantity').val();
+    updateFinalPrice();
+  });
+
+  $('.minus').on('click', function() {
+    $('#quantity').val(parseInt($('#quantity').val(), 10) - 1);
+    order.quantity = $('#quantity').val();
+    updateFinalPrice();
+  });
+
   $('.country').change(function() {
     var country = $('.country option:selected').val();
 
