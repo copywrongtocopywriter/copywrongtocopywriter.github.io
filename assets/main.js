@@ -150,7 +150,7 @@ $(document).ready(function() {
     $('#paypal-button').html('');
 
     paypal.Button.render({
-      env: 'sandbox', // 'production' or 'sandbox'
+      env: 'production', // 'production' or 'sandbox'
       client: {
         sandbox: 'ATi_wJcJ7Cv_pqUWuoKaFsPI-Iq9GLF9C1BwS6f4GTiv4QqILnBC5CBH0N3i68UOg_JMhN3usRyikViS',
         production: 'AXqKyb-iuzscPaDxD_xJMllWPWOblQ09P9-jjgPq5AjFgpuIlbyO5GE-WqGHwxg7VnTQ9BUlsInVLWDQ'
