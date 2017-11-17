@@ -1028,7 +1028,7 @@ body {
         }
   
         .price {
-          flex: 0 0 50%;
+          flex: 0 0 40%;
           display: none;
 
           @media (max-width: $mobile) {
@@ -1064,8 +1064,10 @@ body {
         }
   
         .purchase {
-          flex: 0 0 50%;
+          flex: 0 0 60%;
+          max-width: 60%;
           padding-top: 10px;
+          padding-right: 20px;
 
           @media (max-width: $mobile) {
             max-width: 375px;
