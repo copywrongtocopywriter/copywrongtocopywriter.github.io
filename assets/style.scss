@@ -127,6 +127,7 @@ body {
   font-size: 18px;
   line-height: 25px;
   color: $black;
+  overflow-x: hidden;
   
   &.hold {
     overflow: hidden;
