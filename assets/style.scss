@@ -83,7 +83,7 @@ $mobile: 650px;
 }
 
 @font-face {
-  font-family: 'Tiempos Text Semibold';
+  font-family: 'Tiempos Text';
   src: url('tiempostext-semibold-webfont.woff2') format('woff2'),
        url('tiempostext-semibold-webfont.woff') format('woff');
   font-weight: bold;
@@ -465,7 +465,8 @@ body {
 
       h2 {
         @extend .large-text;        
-        font-family: 'Tiempos Text Semibold', serif;
+        font-family: 'Tiempos Text', serif;
+        font-weight: bold;
         margin-bottom: 107px;
 
         @media (max-width: $tablet) {
