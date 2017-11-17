@@ -97,7 +97,7 @@ layout: homepage
       <section class="subscribe">
         <div class="text">
           <h3>{{ page['Newsletter Title'] }}</h3>
-          <p>{{ page['Newsletter Text'] | markdownify }}</p>
+          {{ page['Newsletter Text'] | markdownify }}
         </div>
         <form class="mailchimp" action="//copygui.us13.list-manage.com/subscribe/post?u=e1d92b06ad38636c8a6db59fc&amp;id=ec3f4b3a08" method="post">
           <input type="email" name="EMAIL" placeholder="Your email here" required>
@@ -112,7 +112,7 @@ layout: homepage
       <section class="social">
         <img src="/assets/instagram.png" alt="Instagram">
         <h3>Instagram</h3>
-        <p>{{ page['Instagram Text'] | markdownify }}</p>
+        {{ page['Instagram Text'] | markdownify }}
         <a target="_blank" href="https://www.instagram.com/copywrongtocopywriter/">@copywrongtocopywriter</a>
       </section>
     </main>
@@ -139,7 +139,7 @@ layout: homepage
                 <img class="pointer" src="/assets/buy-pointer.png" alt="">
                 <div class="shipping-options">
                   <div>
-                    <label class="regular" for="regular">Regular&mdash;$8</span></label>
+                    <label class="regular" for="regular">Regular&mdash;$8</label>
                     <label class="international" for="international">DHL&mdash;$12</label>
                   </div>
                 </div>
