@@ -83,7 +83,7 @@ $mobile: 650px;
 }
 
 @font-face {
-  font-family: 'Tiempos Text';
+  font-family: 'Tiempos Text Semibold';
   src: url('tiempostext-semibold-webfont.woff2') format('woff2'),
        url('tiempostext-semibold-webfont.woff') format('woff');
   font-weight: bold;
@@ -767,10 +767,18 @@ body {
     bottom: 0;
     left: 0;
     z-index: 100;
+    opacity: 0;
     overflow-y: scroll;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+
+    &.display {
+      display: flex;
+    }
 
     &.show {
-      display: flex;
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .buy-modal {
