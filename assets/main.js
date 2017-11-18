@@ -28,6 +28,9 @@ $(document).ready(function() {
     onResize();
   });
 
+  // Marquee Safari fix
+  $('.marquee-pre').addClass('marquee');
+
   // Slideshow
   $('.intro-slideshow').flickity({
     draggable: false,

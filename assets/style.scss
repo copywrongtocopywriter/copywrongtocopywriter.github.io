@@ -199,60 +199,36 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
     background-color: #FFE224;
-    overflow: hidden;
+    overflow-x: hidden;
     white-space: nowrap;
 
     .one {
       display: inline-block;
-      -webkit-animation: marquee 60s linear infinite;
-      -webkit-animation-delay: -30s;
-      animation: marquee 60s linear infinite;
-      animation-delay: -30s;
+      animation: 60s linear -30s infinite marquee;
       will-change: transform;
     }
 
     .two {
       display: inline-block;
-      -webkit-animation: marquee-2 60s linear infinite;
-      -webkit-animation-delay: 0s;
-      animation: marquee-2 60s linear infinite;
-      animation-delay: 0s;
+      animation: 60s linear 0s infinite marquee-2;
       will-change: transform;
     }
   }
 
-  @-webkit-keyframes marquee {
-    from {
-      -webkit-transform: translateX(100%);
-    }
-    to {
-      -webkit-transform: translateX(-100%);
-    }
-  }
-
   @keyframes marquee {
-    from {
+    0% {
       transform: translateX(100%);
     }
-    to {
+    100% {
       transform: translateX(-100%);
     }
   }
 
-  @-webkit-keyframes marquee-2 {
-    from {
-      -webkit-transform: translateX(0%);
-    }
-    to {
-      -webkit-transform: translateX(-200%);
-    }
-  }
-
   @keyframes marquee-2 {
-    from {
+    0% {
       transform: translateX(0%);
     }
-    to {
+    100% {
       transform: translateX(-200%);
     }
   }
