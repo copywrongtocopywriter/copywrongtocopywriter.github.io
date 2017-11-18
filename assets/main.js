@@ -32,7 +32,7 @@ $(document).ready(function() {
   $('.intro-slideshow').flickity({
     draggable: false,
     wrapAround: true,
-    autoPlay: 5500,
+    autoPlay: 3500,
   });
 
   // Modal behaviour
