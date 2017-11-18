@@ -204,6 +204,8 @@ body {
 
     .one {
       display: inline-block;
+      -webkit-animation: marquee 60s linear infinite;
+      -webkit-animation-delay: -30s;
       animation: marquee 60s linear infinite;
       animation-delay: -30s;
       will-change: transform;
@@ -211,9 +213,20 @@ body {
 
     .two {
       display: inline-block;
+      -webkit-animation: marquee-2 60s linear infinite;
+      -webkit-animation-delay: 0s;
       animation: marquee-2 60s linear infinite;
       animation-delay: 0s;
       will-change: transform;
+    }
+  }
+
+  @-webkit-keyframes marquee {
+    from {
+      -webkit-transform: translateX(100%);
+    }
+    to {
+      -webkit-transform: translateX(-100%);
     }
   }
 
@@ -223,6 +236,15 @@ body {
     }
     to {
       transform: translateX(-100%);
+    }
+  }
+
+  @-webkit-keyframes marquee-2 {
+    from {
+      -webkit-transform: translateX(0%);
+    }
+    to {
+      -webkit-transform: translateX(-200%);
     }
   }
 
