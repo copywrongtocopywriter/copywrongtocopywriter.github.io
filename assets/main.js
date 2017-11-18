@@ -30,6 +30,7 @@ $(document).ready(function() {
 
   // Marquee Safari fix
   $('.marquee-pre').addClass('marquee');
+  $('.marquee-pre').removeClass('marquee-pre');
 
   // Slideshow
   $('.intro-slideshow').flickity({
