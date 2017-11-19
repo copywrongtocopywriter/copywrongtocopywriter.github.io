@@ -153,6 +153,9 @@ $(document).ready(function() {
       order.quantity = 1;
     }
 
+    if (order.quantity > 1) $('.plural').show();
+    else $('.plural').hide();
+
     $('.book-price').html(order.quantity * 25);
     $('.shipping-price').html(order.shipping);
     $('.total-price').html((order.quantity * 25) + order.shipping);
