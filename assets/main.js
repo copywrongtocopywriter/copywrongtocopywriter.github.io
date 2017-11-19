@@ -153,6 +153,8 @@ $(document).ready(function() {
       order.quantity = 1;
     }
 
+    $('.book-price').html(order.quantity * 25);
+    $('.shipping-price').html(order.shipping);
     $('.total-price').html((order.quantity * 25) + order.shipping);
 
     if (order.shipping > 0) {

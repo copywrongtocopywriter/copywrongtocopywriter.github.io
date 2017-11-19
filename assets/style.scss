@@ -826,6 +826,15 @@ body {
             margin: 0 auto;
           }       
 
+          .quantity {
+            display: flex;
+
+            .message {
+              flex: 0 0 59%;
+              margin-left: auto;
+            }
+          }
+
           .quantity, .shipping {
             margin-left: 33px;
     
@@ -974,7 +983,8 @@ body {
             }
       
             .shipping-options {
-              margin-bottom: 60px;
+              margin-top: 40px;
+              margin-bottom: 40px;
     
               @media (max-width: $mobile) {
                 flex-direction: column;
@@ -1031,7 +1041,7 @@ body {
         }
   
         .price {
-          flex: 0 0 40%;
+          flex: 0 0 60%;
           display: none;
 
           @media (max-width: $mobile) {
@@ -1045,10 +1055,10 @@ body {
           }
 
           h4 {
-            font-weight: normal;
+            font-weight: bold;
           }
   
-          p {
+          p.larger {
             font-weight: normal;
             font-size: 22px;
             margin-top: 11px;
@@ -1067,8 +1077,8 @@ body {
         }
   
         .purchase {
-          flex: 0 0 60%;
-          max-width: 60%;
+          flex: 0 0 40%;
+          max-width: 40%;
           padding-top: 10px;
           padding-right: 20px;
 
