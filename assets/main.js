@@ -143,6 +143,9 @@ $(document).ready(function() {
   });
   
   function updateFinalPrice() {
+    if (order.quantity > 3) $('.top .message').show();
+    else $('.top .message').hide();
+
     if (order.quantity > 3 ) {
       $('#quantity').val(3);  
       order.quantity = 3;
