@@ -1,7 +1,7 @@
 ---
 title: Homepage
 date: 2017-11-13 15:53:00 +11:00
-Marquee: copywrong to copywriter
+Marquee: getting copywriter all the time
 Buy Now Button: Buy now $25
 Thank You Text: Payment success! You'll receive an email shortly.
 Column One Text: |-
