@@ -829,6 +829,14 @@ body {
           .quantity {
             display: flex;
 
+            @media (max-width: $mobile) {
+              display: block;
+
+              .message {
+                margin-top: 30px;
+              }
+            }
+
             .message {
               flex: 0 0 59%;
               margin-left: auto;
@@ -1038,6 +1046,10 @@ body {
 
         &.show {
           display: flex;
+
+          @media (max-width: $mobile) {
+            display: block;
+          }
         }
   
         .price {
