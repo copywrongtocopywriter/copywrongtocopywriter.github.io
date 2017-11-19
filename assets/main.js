@@ -79,6 +79,12 @@ $(document).ready(function() {
         if (data.result !== 'success') {
           $('.form-response .error').show();
         } else {
+          ga('send', 'event', {
+              eventCategory: 'Newsletter',
+              eventAction: 'Sign up'
+            }
+          );
+
           $('.form-response .success').show();
         }
 
