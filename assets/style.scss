@@ -673,7 +673,11 @@ body {
           padding: 7px;
           color: $white;
           background-color: $green;
-          transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+          background-image: url('thumbs-up.png');
+          background-size: 34px;
+          background-repeat: no-repeat;
+          background-position: center 600%;
+          transition: background-color 0.3s cubic-bezier(0.55, 0, 0.1, 1), background-position 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 
           @media (max-width: $tablet) {
             height: 46px;
@@ -689,6 +693,10 @@ body {
           &:hover {
             background-color: $hover-green;
             cursor: pointer;
+          }
+
+          &.ok {
+            background-position: center center;
           }
         }
       }
@@ -838,6 +846,7 @@ body {
             }
 
             .message {
+              display: none;
               flex: 0 0 59%;
               margin-left: auto;
             }
