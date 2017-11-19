@@ -25,6 +25,17 @@ layout: homepage
       ga('send', 'pageview');
       ga('require', 'ecommerce');
     </script>
+    <!-- Hotjar Tracking Code for www.copygui.de -->
+    <script>
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:581156,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
     <link href="/assets/normalize.css" rel="stylesheet">
     <link href="/assets/flickity.css" rel="stylesheet">
     <link href="/assets/style.css?v=cat" rel="stylesheet">
@@ -106,6 +117,7 @@ layout: homepage
         </form>
         <div class="form-response">
           <div class="error">Sorry, please try again.</div>
+          <div class="already">You're already subscribed!</div>
           <div class="success">You're signed up.</div>
         </div>
       </section>
@@ -126,6 +138,7 @@ layout: homepage
         <div class="form">
           <div class="top">
             <div class="quantity">
+              <div class="number">
                 <label for="quantity">Quantity</label><br>
                 <div class="numbers">
                   <input type="number" min="1" max="3" name="quantity" id="quantity" value="1" required>
@@ -133,26 +146,40 @@ layout: homepage
                   <img class="minus" src="/assets/minus.svg">
                 </div>
               </div>
-              <div class="shipping">
-                <label for="country">Shipping to</label>
-                <select name="country" class="country" required>
-                  <option value="" disabled selected>Country</option>
-                  <option value="AU">Australia</option>
-                  <option value="INT">International</option>
-                </select>
-                <img class="pointer" src="/assets/buy-pointer.png" alt="">
-                <div class="shipping-options">
-                  <div>
-                    <label class="regular" for="regular">Regular&mdash;$8</label>
-                    <label class="international" for="international">DHL&mdash;$12</label>
-                  </div>
+              <div class="message">
+                <b>Want more than 3 books?</b><br>
+                Email me at <a href="mailto:tait@copygui.de">tait@copygui.de</a>.<br>
+                I’ll help you out and organise shipping. 
+              </div>
+            </div>
+            <div class="shipping">
+              <label for="country">Calculate Shipping</label>
+              <select name="country" class="country" required>
+                <option value="" disabled selected>Choose your destination</option>
+                <option value="AU">Australia</option>
+                <option value="INT">International</option>
+              </select>
+              <img class="pointer" src="/assets/buy-pointer.png" alt="">
+              <div class="shipping-options">
+                <div>
+                  <label class="regular" for="regular">
+                    <b>Shipping and handling</b><br>
+                    Australia Post (with tracking)&mdash;$8<br>
+                  </label>
+                  <label class="international" for="international">
+                    <b>Shipping and handling</b><br>
+                    DHL International (with tracking)&mdash;$12<br>
+                  </label>
                 </div>
               </div>
+            </div>
           </div>
           <div class="extra">
             <div class="price">
               <h4>Total</h4>
-              <p>$<span class="total-price"></span> AUD</p>
+              <p>Book&mdash;$<span class="book-price"></span><br>
+              Shipping and handling&mdash;$<span class="shipping-price"></span></p>
+              <p class="larger">$<span class="total-price"></span> AUD</p>
             </div>
             <div class="purchase">
               <div id="paypal-button"></div>

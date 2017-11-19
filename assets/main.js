@@ -77,7 +77,11 @@ $(document).ready(function() {
       },
       success: function(data) {
         if (data.result !== 'success') {
-          $('.form-response .error').show();
+          if (data.msg.indexOf('already subscribed to list') !== -1) {
+            $('.form-response .already').show();
+          } else {
+            $('.form-response .error').show();
+          }
         } else {
           ga('send', 'event', {
               eventCategory: 'Newsletter',
@@ -149,6 +153,8 @@ $(document).ready(function() {
       order.quantity = 1;
     }
 
+    $('.book-price').html(order.quantity * 25);
+    $('.shipping-price').html(order.shipping);
     $('.total-price').html((order.quantity * 25) + order.shipping);
 
     if (order.shipping > 0) {
