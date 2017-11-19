@@ -77,7 +77,11 @@ $(document).ready(function() {
       },
       success: function(data) {
         if (data.result !== 'success') {
-          $('.form-response .error').show();
+          if (data.msg.indexOf('already subscribed to list') !== -1) {
+            $('.form-response .already').show();
+          } else {
+            $('.form-response .error').show();
+          }
         } else {
           ga('send', 'event', {
               eventCategory: 'Newsletter',
