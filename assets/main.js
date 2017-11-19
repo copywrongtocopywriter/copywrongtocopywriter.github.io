@@ -62,6 +62,11 @@ $(document).ready(function() {
     $('body').removeClass('hold');
   })
 
+  var dots;
+  var dot = '.';
+  var currentDots = 0;
+  var maxDots = 4;
+
   $('.mailchimp').on('submit', function() {
     var that = this;
 
@@ -76,7 +81,10 @@ $(document).ready(function() {
       error: function(err) {
       },
       success: function(data) {
+        clearInterval(dots);
         if (data.result !== 'success') {
+          $(that).find('input[type="submit"]').val('Join');
+
           if (data.msg.indexOf('already subscribed to list') !== -1) {
             $('.form-response .already').show();
           } else {
@@ -89,20 +97,29 @@ $(document).ready(function() {
             }
           );
 
+          $(that).find('input[type="submit"]').val('');
+          $(that).find('input[type="submit"]').addClass('ok');
+
           $('.form-response .success').show();
         }
 
         setTimeout(function() {
           $('.form-response div').hide();
-          $(this).find('input[type="submit"]').val('Join');
+          $(that).find('input[type="submit"]').val('Join');
+          $(that).find('input[type="submit"]').removeClass('ok');
         }, 5000);
       }
     });
 
-    $(this).find('input[type="submit"]').val('.....');
+    dots = setInterval(function() {
+      currentDots = (currentDots > maxDots) ? 1 : currentDots + 1;
+      var newValue = dot.repeat(currentDots);
+      $('.mailchimp input[type="submit"]').val(newValue);
+    }, 200);
 
     return false;
   });
+
 
   $('.plus').on('click', function() {
     $('#quantity').val(parseInt($('#quantity').val(), 10) + 1);
@@ -249,3 +266,38 @@ $(document).ready(function() {
 
   updateFinalPrice();
 });
+
+if (!String.prototype.repeat) {
+  String.prototype.repeat = function(count) {
+    'use strict';
+    if (this == null) {
+      throw new TypeError('can\'t convert ' + this + ' to object');
+    }
+    var str = '' + this;
+    count = +count;
+    if (count != count) {
+      count = 0;
+    }
+    if (count < 0) {
+      throw new RangeError('repeat count must be non-negative');
+    }
+    if (count == Infinity) {
+      throw new RangeError('repeat count must be less than infinity');
+    }
+    count = Math.floor(count);
+    if (str.length == 0 || count == 0) {
+      return '';
+    }
+    // Ensuring count is a 31-bit integer allows us to heavily optimize the
+    // main part. But anyway, most current (August 2014) browsers can't handle
+    // strings 1 << 28 chars or longer, so:
+    if (str.length * count >= 1 << 28) {
+      throw new RangeError('repeat count must not overflow maximum string size');
+    }
+    var rpt = '';
+    for (var i = 0; i < count; i++) {
+      rpt += str;
+    }
+    return rpt;
+  }
+}
