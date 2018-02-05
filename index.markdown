@@ -19,8 +19,8 @@ Column Three Text: |-
 Quote One Text: A fantastic way to up your copywriting game and grow more confident
   in your ability to use the right words.
 Quote One Author: Michael Bascetta
-Quote One Link: Small business owner at Grow Assembly
-Quote One Link URL: https://www.growassembly.com.au/
+Quote One Link: Small business owner at Worksmith
+Quote One Link URL: https://www.worksmith.io/
 List Title: What’s in the book
 List Item One Text: |-
   #### 1. You, the expert
