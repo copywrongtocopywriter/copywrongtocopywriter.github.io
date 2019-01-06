@@ -29,7 +29,7 @@ List Item One Text: |-
 List Item Two Text: |-
   #### 2. The fundamentals
 
-  Develop your ability to the say the right thing (strategy) to the right people (audience) in the right way (grammar).
+  Develop your ability to say the right thing (strategy) to the right people (audience) in the right way (grammar).
 List Item Three Text: |-
   #### 3. Get to work
 
