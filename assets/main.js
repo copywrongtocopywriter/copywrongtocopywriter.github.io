@@ -143,12 +143,12 @@ $(document).ready(function() {
 
     if (country === 'AU') {
       $('.shipping-options label.regular').show();
-      order.shipping = 8;
+      order.shipping = 9.5;
       updateFinalPrice();
       $('.extra .price').show();
     } else if (country === 'INT') {
       $('.shipping-options label.international').show();
-      order.shipping = 12;
+      order.shipping = 15;
       updateFinalPrice();
       $('.extra .price').show();
     }
