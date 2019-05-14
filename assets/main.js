@@ -176,9 +176,9 @@ $(document).ready(function() {
     if (order.quantity > 1) $('.plural').show();
     else $('.plural').hide();
 
-    $('.book-price').html(order.quantity * 25);
-    $('.shipping-price').html(order.shipping);
-    $('.total-price').html((order.quantity * 25) + order.shipping);
+    $('.book-price').html((order.quantity * 25).toFixed(2));
+    $('.shipping-price').html(order.shipping.toFixed(2));
+    $('.total-price').html(((order.quantity * 25) + order.shipping).toFixed(2));
 
     if (order.shipping > 0) {
       $('.extra').addClass('show');
