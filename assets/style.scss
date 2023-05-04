@@ -320,10 +320,12 @@ body {
         @extend .large-bold-text;
 
         display: block;
-        width: 185px;
+        width: 100%;
+        max-width: 300px;
         height: 58px;
         margin: 69px auto 0 auto;
         border: none;
+        padding: 0 24px;
         font-size: 20px;
         color: $white;
         background-color: $green;
