@@ -2,7 +2,9 @@
 title: Homepage
 date: 2017-11-13 15:53:00 +11:00
 Marquee: getting copywriter all the time
-Buy Now Button: Buy now $25
+AU Price: $25
+US Price: $16
+UK Price: £9.99
 Thank You Text: Payment success! You'll receive an email shortly.
 Column One Text: |-
   #### Made for small business
